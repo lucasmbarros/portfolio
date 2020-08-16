@@ -1,0 +1,344 @@
+/* apply styles to all */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(237, 238, 246);
+    --secondary-color: rgb(49, 52, 62);
+    --tertiary-color: rgb(142, 177, 188);
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+/* header & nav style */
+header {
+    padding: 10px 20px;
+    padding-left: 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 45px;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: var(--tertiary-color);
+    padding-left: 50px;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--tertiary-color);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2px 30px;
+    text-decoration: underline;
+}
+
+/* hero style */
+.hero {
+    background-image: url("../images/hero-img.jpg");
+    background-size: 100%;
+    background-position: -70% 38%;
+    padding-top: 100px;
+    background-attachment: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.hero h2 {
+    background-color:var(--tertiary-color);
+    padding: 20px;
+    margin: 70px 40px 20px 0px;
+    color: var(--secondary-color);
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+/* section style */
+.div-flex {
+    display: flex;
+    margin: 5vw;
+}
+
+.title-flex {
+    width: 10vw;
+    text-align: right;
+    margin: 3vw;
+}
+
+.content-flex {
+    width: 90vw;
+    justify-content: flex-start;
+    font-size: 20px;
+    border-left: 3px solid var(--secondary-color);
+    padding: 3vw;
+}
+
+/* work section general style */
+.work-grid-container {
+    display: grid;
+    width: 100%;
+    height: 600px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-item {
+    border: 5px solid var(--tertiary-color);
+    padding: 15px;
+    position: relative;
+    padding-left: 0;
+}
+
+.project-name {
+    background-color: var(--tertiary-color);
+    padding: 1vw;
+    color: var(--secondary-color);
+    max-width: 175vw;
+    position: absolute;
+    top: 120px;
+    bottom: 10px;    
+    font-size: larger;
+}
+
+#project-name-1 {
+    position: absolute;
+    top: 320px;
+}
+
+
+/* work image */
+.project-image {
+    background-size: 100% 100%;
+    display: block;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    }
+
+/* work section project-specific */
+#grid-item-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    background-size: cover;    
+    background-image: url("../images/run-page.jpg");
+    opacity: 0.75;
+}
+
+#grid-item-2 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    background-size: cover;
+    background-image: url("../images/horiseon-page.png");
+    opacity: 0.75;
+}
+
+#grid-item-3 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    background-size: cover;
+    background-image: url("../images/place-holder-3.jpg");
+    opacity: 0.75;
+}
+
+#grid-item-4 {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    background-size: cover;
+    background-image: url("../images/place-holder-4.jpg");
+    opacity: 0.75;
+}
+
+#grid-item-5 {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    background-size: cover;
+    background-image: url("../images/place-holder-5.jpg");
+    opacity: 0.75;
+}
+
+#grid-item-6 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    background-size: cover;
+    background-image: url("../images/place-holder-6.jpg");
+    opacity: 0.75;
+}
+
+/* work hover effect */
+
+#grid-item-1:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#grid-item-2:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#grid-item-3:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#grid-item-4:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#grid-item-5:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#grid-item-6:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* contact section style */
+#contact-flex ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#contact-flex ul li a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    padding: 30px;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header h1 {
+        text-align: center;
+    }
+
+    header nav ul {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-flex, #contact-flex ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    #contact-flex ul li a {
+        padding: 30px;
+    }
+
+    .work-grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+    .project-name {               
+        position: static;
+        text-align: justify;
+    }
+
+    #project-name-1 {
+        position: static;
+    }
+    
+    .grid-item {
+        width: 100%;
+    }
+
+    #grid-item-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+    
+    #grid-item-2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    #grid-item-3 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    #grid-item-4 {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    #grid-item-5 {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 1;
+    }
+
+    #grid-item-6 {
+        grid-column: 1 / span 1;
+        grid-row: 6 / span 1;
+    }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {   
+    .title-flex {
+        width: 20vw;
+    }
+    
+    .content-flex {
+        width: 80vw;
+    }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+    .div-flex {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    
+    .title-flex {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .content-flex {
+        text-align: center;
+        border-top: 3px solid var(--secondary-color);
+        border-left: none;
+        width: 100%;
+        margin: 0px
+    }
+}
