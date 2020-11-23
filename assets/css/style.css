@@ -182,7 +182,7 @@ header nav ul li a {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
     background-size: cover;
-    background-image: url("../images/place-holder-5.jpg");
+    background-image: url("../images/chit-chat.png");
     opacity: 0.75;
 }
 
